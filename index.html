@@ -151,12 +151,14 @@
     display:flex; align-items:center; gap:14px; flex-wrap:wrap;
     font-family:'Space Grotesk', sans-serif;
     font-weight:700;
-    font-size:clamp(1.3rem, 4.5vw, 2.3rem);
+    font-size:clamp(1.15rem, 3.8vw, 1.9rem);
     line-height:1.15;
     margin:0 0 6px;
   }
   .route .arrow{color:var(--tag); font-size:1.3rem;}
+  .route .divider{color:var(--tag); font-weight:400; font-size:1rem; margin:0 2px; opacity:0.7;}
   .route span.from{color:var(--ink-soft);}
+  .route span.mid{color:var(--tag);}
   .route span.to{color:var(--data);}
 
   .route-track{position:relative; height:16px; margin:6px 2px 4px;}
@@ -413,22 +415,21 @@
       <div class="field">Origin<b>Surabaya, Indonesia</b></div>
     </div>
     <div class="label-body">
+      <p class="track-label mono" style="margin-bottom:6px;">Open To</p>
       <div class="route">
         <span class="from">Warehouse Ops</span>
-        <span class="arrow">&#8594;</span>
-        <span class="to">Data Analytics</span>
+        <span class="divider">|</span>
+        <span class="mid">Supply Chain</span>
+        <span class="divider">|</span>
+        <span class="to">Data Analyst</span>
       </div>
-      <div class="route-track" aria-hidden="true">
-        <div class="track-line"></div>
-        <div class="track-marker"></div>
-      </div>
-      <p class="track-label mono">Status: In Transit — Skill Transfer Ongoing</p>
-      <p class="subline">Kenny Fransiscus Rao — an operations professional with 4+ years in warehouse management and inventory control within manufacturing, now transitioning into Data Analytics through hands-on projects and continuous learning.</p>
+      <p class="track-label mono">Status: Actively Seeking New Opportunities</p>
+      <p class="subline">Kenny Fransiscus Rao — an operations professional with 4+ years in warehouse management and inventory control within manufacturing, now expanding into Data Analytics through hands-on projects and continuous learning.</p>
       <div class="cargo-row">
         <span class="cargo-tag">SQL / BigQuery</span>
         <span class="cargo-tag">Python</span>
         <span class="cargo-tag">Tableau</span>
-        <span class="cargo-tag">PPIC</span>
+        <span class="cargo-tag">Supply Chain</span>
         <span class="cargo-tag">Excel</span>
       </div>
       <div class="barcode-wrap">
@@ -443,7 +444,7 @@
     </div>
     <div class="label-bottom">
       <span>Handle with: Data-Driven Decisions</span>
-      <span>Fragile: No — Field-Tested</span>
+      <span>Availability: Open to Offers</span>
     </div>
   </div>
 </div>
@@ -507,7 +508,7 @@
         <div class="gauge-row"><div class="gauge-label mono">Data Visualization</div><div class="gauge-track"><div class="gauge-fill" data-fill="84"></div></div><div class="gauge-pct mono">84%</div></div>
       </div>
       <div class="track ops" data-code="TRACK / OPS">
-        <h3>Supply Chain &amp; PPIC</h3>
+        <h3>Supply Chain</h3>
         <div class="gauge-row"><div class="gauge-label mono">Warehouse Ops</div><div class="gauge-track"><div class="gauge-fill" data-fill="95"></div></div><div class="gauge-pct mono">95%</div></div>
         <div class="gauge-row"><div class="gauge-label mono">Production Planning</div><div class="gauge-track"><div class="gauge-fill" data-fill="90"></div></div><div class="gauge-pct mono">90%</div></div>
         <div class="gauge-row"><div class="gauge-label mono">Inventory Control</div><div class="gauge-track"><div class="gauge-fill" data-fill="93"></div></div><div class="gauge-pct mono">93%</div></div>
@@ -668,7 +669,7 @@
   <div class="wrap">
     <p class="eyebrow">// 06 Delivery Address</p>
     <h2>Let's connect.</h2>
-    <p>Open to Data Analyst, Business Analyst, and Supply Chain roles — willing to relocate. Reach out through any of the channels below.</p>
+    <p style="font-weight:600; color:var(--paper); opacity:0.92;">Open to Data Analyst, Business Analyst, and Supply Chain roles — willing to relocate. Reach out through any of the channels below.</p>
     <div class="contact-row">
       <a class="contact-btn" href="mailto:kennyrao29@gmail.com">✉ kennyrao29@gmail.com</a>
       <a class="contact-btn" href="tel:+6282144961773">☎ +62 821-4496-1773</a>
