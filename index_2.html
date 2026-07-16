@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenny Fransiscus Rao — Manifest</title>
+<meta name="description" content="Kenny Fransiscus Rao — Operations professional transitioning into Data Analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0D141F;
+    --ink:#ECEFF4;
+    --ink-soft:#93A3BC;
+    --line:#293A54;
+    --tag:#F2AB4C;
+    --tag-deep:#F2AB4C;
+    --data:#5FBDB2;
+    --white:#141E2C;
+    --stamp:#E2685F;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Serif', serif;
+    line-height:1.6;
+    transition:background .45s ease, color .45s ease;
+  }
+  nav, .label, .track, .card, .stat-box, footer, .contact-btn, .cargo-tag, .gauge-track, .edu-item{
+    transition:background-color .45s ease, border-color .45s ease, color .45s ease, box-shadow .45s ease;
+  }
+  h1,h2,h3, .display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.01em;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit;}
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(13,20,31,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:14px; padding-bottom:14px;
+    flex-wrap:wrap; gap:10px;
+  }
+  .brand{
+    font-size:0.85rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+  .navlinks{display:flex; gap:20px; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; align-items:center; flex-wrap:wrap;}
+  .navlinks a{text-decoration:none; color:var(--ink-soft); padding-bottom:3px; border-bottom:1px solid transparent; transition:border-color .2s, color .2s;}
+  .navlinks a:hover, .navlinks a:focus-visible{color:var(--ink); border-color:var(--tag);}
+
+  /* ---------- HERO / MANIFEST LABEL ---------- */
+  .manifest{
+    margin:40px auto 0;
+    max-width:900px;
+    padding:0 20px;
+  }
+
+  /* photo id badge */
+  .photo-badge-wrap{
+    display:flex; justify-content:flex-end;
+    padding-right:34px;
+    margin-bottom:-22px;
+    position:relative;
+    z-index:6;
+  }
+  .photo-badge{
+    width:clamp(74px, 14vw, 104px);
+    padding:6px 6px 15px;
+    background:var(--white);
+    border:2px solid var(--ink);
+    box-shadow:5px 5px 0 var(--line);
+    transform:rotate(4deg);
+    position:relative;
+  }
+  .photo-badge::before{
+    content:'';
+    position:absolute; top:-9px; left:50%;
+    transform:translateX(-50%) rotate(-3deg);
+    width:40px; height:15px;
+    background:rgba(225,147,46,0.4);
+    border:1px solid rgba(179,111,23,0.45);
+  }
+  .photo-badge img{
+    display:block; width:100%; aspect-ratio:1/1;
+    object-fit:cover; object-position:center 22%;
+  }
+  .photo-badge .cap{
+    position:absolute; bottom:2px; left:0; right:0; text-align:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.52rem; letter-spacing:0.03em;
+    color:var(--ink-soft); text-transform:uppercase;
+  }
+
+  .label{
+    background:var(--white);
+    border:2px solid var(--ink);
+    position:relative;
+    padding:0;
+    box-shadow:8px 8px 0 var(--line);
+    animation: printReveal 1.15s cubic-bezier(.65,0,.35,1) both;
+  }
+  @keyframes printReveal{
+    from{ clip-path: inset(0 0 100% 0); }
+    to{ clip-path: inset(0 0 0 0); }
+  }
+  @media (prefers-reduced-motion: reduce){ .label{ animation:none; } }
+  .label-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    padding:20px 26px 16px;
+    border-bottom:2px dashed var(--line);
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .label-top .field{font-size:0.72rem; text-transform:uppercase; color:var(--ink-soft);}
+  .label-top .field b{display:block; font-size:0.95rem; color:var(--ink); font-weight:600; text-transform:none; margin-top:2px;}
+  .stamp{
+    border:2.5px solid var(--stamp);
+    color:var(--stamp);
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    padding:5px 10px;
+    border-radius:4px;
+    transform:rotate(-6deg);
+    white-space:nowrap;
+  }
+  .label-body{padding:30px 26px 24px;}
+  .route{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:clamp(1.3rem, 4.5vw, 2.3rem);
+    line-height:1.15;
+    margin:0 0 6px;
+  }
+  .route .arrow{color:var(--tag); font-size:1.3rem;}
+  .route span.from{color:var(--ink-soft);}
+  .route span.to{color:var(--data);}
+
+  .route-track{position:relative; height:16px; margin:6px 2px 4px;}
+  .track-line{
+    position:absolute; top:50%; left:0; right:0; height:2px;
+    background:repeating-linear-gradient(to right, var(--line) 0 6px, transparent 6px 12px);
+    transform:translateY(-50%);
+  }
+  .track-marker{
+    position:absolute; top:50%; width:12px; height:12px; border-radius:50%;
+    background:var(--tag);
+    box-shadow:0 0 0 4px rgba(225,147,46,0.22);
+    transform:translate(-50%,-50%);
+    animation: travel 3.8s ease-in-out infinite;
+  }
+  @keyframes travel{ 0%{left:0%;} 50%{left:100%;} 100%{left:0%;} }
+  .track-label{font-size:0.68rem; color:var(--ink-soft); margin:0 0 20px; text-transform:uppercase;}
+
+  .subline{font-size:1rem; color:var(--ink-soft); max-width:62ch; margin:0 0 22px;}
+  .cargo-row{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .cargo-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    border:1px solid var(--ink);
+    padding:5px 10px;
+    background:var(--paper);
+  }
+  .barcode-wrap{position:relative; overflow:hidden; margin:18px 0 6px; height:38px;}
+  .barcode{ display:flex; align-items:flex-end; gap:2px; height:100%; }
+  .barcode span{background:var(--ink); display:inline-block; height:100%;}
+  .scan-line{
+    position:absolute; left:0; right:0; height:2px;
+    background:var(--stamp);
+    box-shadow:0 0 8px var(--stamp);
+    animation: scan 2.4s ease-in-out infinite;
+  }
+  @keyframes scan{ 0%{top:0;} 50%{top:100%;} 100%{top:0;} }
+  @media (prefers-reduced-motion: reduce){ .track-marker, .scan-line{animation:none;} }
+
+  /* conveyor */
+  .conveyor{
+    position:relative; height:52px; margin:22px 0 6px;
+    overflow:hidden;
+    border-top:1px dashed var(--line);
+    border-bottom:1px dashed var(--line);
+  }
+  .conveyor::after{
+    content:''; position:absolute; left:50%; top:0; bottom:0; width:2px;
+    background:var(--tag); z-index:2;
+  }
+  .conveyor-label{
+    position:absolute; top:-9px; left:50%; transform:translateX(-50%);
+    background:var(--white); padding:0 8px;
+    font-size:0.6rem; color:var(--tag-deep); text-transform:uppercase;
+    letter-spacing:0.06em; white-space:nowrap; z-index:3;
+  }
+  .conveyor-track{
+    display:flex; gap:20px; position:absolute; top:50%; left:0;
+    transform:translateY(-50%);
+    animation: conveyorMove 9s linear infinite;
+    width:max-content;
+  }
+  .conveyor-track.crates{ clip-path: inset(0 50% 0 0); }
+  .conveyor-track.bars{ clip-path: inset(0 0 0 50%); }
+  @keyframes conveyorMove{
+    from{ transform:translateY(-50%) translateX(0); }
+    to{ transform:translateY(-50%) translateX(-50%); }
+  }
+  .crate{ width:24px; height:24px; border:2px solid var(--ink-soft); position:relative; flex:none; }
+  .crate::before, .crate::after{ content:''; position:absolute; background:var(--ink-soft); }
+  .crate::before{ top:50%; left:0; right:0; height:2px; transform:translateY(-50%); }
+  .crate::after{ left:50%; top:0; bottom:0; width:2px; transform:translateX(-50%); }
+  .bar-icon{ width:24px; height:24px; display:flex; align-items:flex-end; gap:3px; flex:none; }
+  .bar-icon span{ width:5px; background:var(--data); display:block; }
+  .bar-icon span:nth-child(1){ height:40%; }
+  .bar-icon span:nth-child(2){ height:70%; }
+  .bar-icon span:nth-child(3){ height:100%; }
+  @media (prefers-reduced-motion: reduce){ .conveyor-track{ animation:none; } }
+
+  .label-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    border-top:2px dashed var(--line);
+    padding:14px 26px;
+    font-size:0.7rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em;
+    flex-wrap:wrap; gap:6px;
+  }
+
+  /* ---------- STATS ---------- */
+  .stats-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  @media(min-width:720px){.stats-grid{grid-template-columns:repeat(4,1fr);}}
+  .stat-box{ border:1.5px solid var(--ink); background:var(--white); padding:18px 16px; text-align:left; }
+  .stat-num{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.9rem; color:var(--data); line-height:1; }
+  .stat-label{ font-family:'IBM Plex Mono', monospace; font-size:0.64rem; text-transform:uppercase; color:var(--ink-soft); margin-top:8px; letter-spacing:0.04em; }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:70px 0;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em;
+    color:var(--tag-deep);
+    margin:0 0 8px;
+  }
+  h2.section-title{font-size:clamp(1.5rem,3.5vw,2rem); margin:0 0 28px; font-weight:600;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid; grid-template-columns:1fr; gap:24px;}
+  .about-text{font-size:1.02rem; color:var(--ink-soft); max-width:66ch;}
+  .about-text strong{color:var(--ink);}
+
+  /* ---------- SKILLS ---------- */
+  .tracks{display:grid; grid-template-columns:1fr; gap:20px;}
+  @media(min-width:720px){.tracks{grid-template-columns:1fr 1fr;}}
+  .track{ border:1.5px solid var(--ink); background:var(--white); padding:22px 22px 20px; position:relative; }
+  .track::before{
+    content:attr(data-code);
+    position:absolute; top:-11px; left:18px;
+    background:var(--paper);
+    padding:0 8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--ink-soft);
+    letter-spacing:0.08em;
+  }
+  .track h3{margin:6px 0 18px; font-size:1.1rem;}
+  .gauge-row{ display:grid; grid-template-columns:132px 1fr 40px; align-items:center; gap:10px; margin-bottom:12px; }
+  .gauge-label{font-size:0.7rem; color:var(--ink-soft);}
+  .gauge-track{ height:10px; background:var(--paper); border:1px solid var(--line); position:relative; overflow:hidden; }
+  .gauge-track::after{
+    content:''; position:absolute; inset:0;
+    background-image:repeating-linear-gradient(to right, transparent 0 9px, var(--line) 9px 10px);
+    opacity:.45;
+  }
+  .gauge-fill{height:100%; width:0%; transition:width 1.3s cubic-bezier(.3,.7,.2,1); position:relative;}
+  .track.data .gauge-fill{background:var(--data);}
+  .track.ops .gauge-fill{background:var(--tag-deep);}
+  .gauge-pct{font-size:0.72rem; text-align:right; color:var(--ink-soft);}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{border-left:2px solid var(--line); margin-left:6px; padding-left:26px;}
+  .tl-item{position:relative; padding-bottom:34px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:''; position:absolute; left:-33px; top:4px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--ink); border:2px solid var(--paper); outline:2px solid var(--ink);
+  }
+  .tl-date{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--tag-deep); text-transform:uppercase;}
+  .tl-role{font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:1.05rem; margin:4px 0 2px;}
+  .tl-org{font-size:0.85rem; color:var(--ink-soft); margin-bottom:8px;}
+  .tl-desc{color:var(--ink-soft); font-size:0.93rem; max-width:62ch; margin:0 0 6px;}
+  .tl-desc ul{margin:6px 0 0; padding-left:18px;}
+  .tl-desc li{margin-bottom:4px;}
+
+  /* ---------- PROJECTS ---------- */
+  .projects{display:grid; grid-template-columns:1fr; gap:18px; perspective:1000px;}
+  .card{
+    background:var(--white);
+    border:1.5px solid var(--ink);
+    padding:24px;
+    display:flex; flex-direction:column; gap:10px;
+    transition:transform .12s ease, box-shadow .12s ease;
+    transform-style:preserve-3d;
+    will-change:transform;
+  }
+  .card:hover{box-shadow:6px 6px 0 var(--line);}
+  .card .tag-line{font-family:'IBM Plex Mono', monospace; font-size:0.68rem; text-transform:uppercase; color:var(--tag-deep); letter-spacing:0.06em;}
+  .card h3{margin:0; font-size:1.15rem;}
+  .card p{margin:0; color:var(--ink-soft); font-size:0.94rem;}
+  .card ul{margin:2px 0 0; padding-left:20px; color:var(--ink-soft); font-size:0.94rem;}
+  .card li{margin-bottom:6px;}
+  .metric-row{display:flex; flex-wrap:wrap; gap:22px; margin:2px 0 4px;}
+  .metric{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.5rem; color:var(--data); display:flex; align-items:baseline; gap:8px; }
+  .metric small{font-family:'IBM Plex Mono', monospace; font-weight:400; font-size:0.65rem; color:var(--ink-soft); text-transform:uppercase;}
+  .card-link{
+    margin-top:6px; font-size:0.8rem; font-weight:600; text-decoration:none;
+    color:var(--ink); border-bottom:1px solid var(--tag);
+    align-self:flex-start;
+  }
+  .stack-row{display:flex; flex-wrap:wrap; gap:6px; margin-top:4px;}
+  .stack-row span{font-family:'IBM Plex Mono', monospace; font-size:0.66rem; background:var(--paper); border:1px solid var(--line); padding:3px 7px;}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-list{display:flex; flex-direction:column; gap:16px;}
+  .edu-item{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+    border-bottom:1px solid var(--line); padding-bottom:16px; flex-wrap:wrap;
+  }
+  .edu-item h3{margin:0 0 4px; font-size:1rem;}
+  .edu-item p{margin:0; color:var(--ink-soft); font-size:0.9rem;}
+  .edu-item .tl-date{white-space:nowrap;}
+
+  /* ---------- CONTACT ---------- */
+  footer{ background:var(--ink); color:var(--paper); padding:60px 0 34px; }
+  footer .eyebrow{color:var(--tag);}
+  footer h2{color:var(--white); font-size:clamp(1.5rem,4vw,2.1rem); margin:0 0 14px;}
+  footer p{color:#B7C0D1; max-width:54ch; margin:0 0 26px;}
+  .contact-row{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:40px;}
+  .contact-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1.5px solid var(--paper);
+    color:var(--white);
+    text-decoration:none;
+    padding:10px 16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    transition:background .18s, color .18s;
+  }
+  .contact-btn:hover{background:var(--tag); border-color:var(--tag); color:var(--ink);}
+  .foot-bottom{border-top:1px solid #2C3B58; padding-top:20px; font-size:0.72rem; color:#7C8AA3; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+
+  .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{transition:none; opacity:1; transform:none;}
+    .card{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">K. F. RAO</div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="manifest">
+  <div class="photo-badge-wrap">
+    <div class="photo-badge">
+      <img src="profile.jpg" alt="Portrait of Kenny Fransiscus Rao">
+      <div class="cap mono">ID: KFR-04</div>
+    </div>
+  </div>
+  <div class="label">
+    <div class="label-top">
+      <div class="field">Manifest No.<b>KFR-2026-04</b></div>
+      <div class="field">Origin<b>Surabaya, Indonesia</b></div>
+      <div class="stamp">Cleared for Transit</div>
+    </div>
+    <div class="label-body">
+      <div class="route">
+        <span class="from">Warehouse Ops</span>
+        <span class="arrow">&#8594;</span>
+        <span class="to">Data Analytics</span>
+      </div>
+      <div class="route-track" aria-hidden="true">
+        <div class="track-line"></div>
+        <div class="track-marker"></div>
+      </div>
+      <p class="track-label mono">Status: In Transit — Skill Transfer Ongoing</p>
+      <p class="subline">Kenny Fransiscus Rao — an operations professional with 4+ years in warehouse management and inventory control within manufacturing, now transitioning into Data Analytics through hands-on projects and continuous learning.</p>
+      <div class="cargo-row">
+        <span class="cargo-tag">SQL / BigQuery</span>
+        <span class="cargo-tag">Python</span>
+        <span class="cargo-tag">Tableau</span>
+        <span class="cargo-tag">PPIC</span>
+        <span class="cargo-tag">Excel</span>
+      </div>
+      <div class="barcode-wrap">
+        <div class="barcode" id="barcode"></div>
+        <div class="scan-line" aria-hidden="true"></div>
+      </div>
+      <div class="conveyor" aria-hidden="true">
+        <div class="conveyor-label mono">Data Conversion</div>
+        <div class="conveyor-track crates" id="conveyorCrates"></div>
+        <div class="conveyor-track bars" id="conveyorBars"></div>
+      </div>
+    </div>
+    <div class="label-bottom">
+      <span>Handle with: Data-Driven Decisions</span>
+      <span>Fragile: No — Field-Tested</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- STATS -->
+  <section id="stats" style="padding-top:50px; padding-bottom:20px;">
+    <div class="stats-grid reveal">
+      <div class="stat-box">
+        <div class="stat-num"><span class="count" data-target="4" data-suffix="+">0</span></div>
+        <div class="stat-label">Years in Operations</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num"><span class="count" data-target="50" data-suffix="%">0</span></div>
+        <div class="stat-label">Shipping Errors Reduced</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num"><span class="count" data-target="35.9" data-suffix="%" data-decimals="1">0</span></div>
+        <div class="stat-label">Revenue Decline Diagnosed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num"><span class="count" data-target="3" data-suffix="">0</span></div>
+        <div class="stat-label">Team Members Led</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="eyebrow reveal">// 01 Manifest Contents</p>
+    <h2 class="section-title reveal">About</h2>
+    <div class="about-grid reveal">
+      <p class="about-text">
+        I'm an operations professional with <strong>4+ years of experience in warehouse management and inventory control</strong> within the manufacturing industry, alongside event coordination experience — currently transitioning into Data Analytics through hands-on projects and continuous learning.
+      </p>
+      <p class="about-text">
+        In a previous supervisory role, I <strong>reduced shipping errors by 50%</strong> by validating loading data against delivery orders. Building on this foundation, I completed a data portfolio project using <strong>SQL (BigQuery) and Tableau</strong>, and developed additional skills in Python, Excel, and dashboard creation.
+      </p>
+      <p class="about-text">
+        I bring a rare combination: firsthand understanding of operational pain points paired with the analytical skills to turn that data into clear, actionable insights — helping teams catch problems earlier and make faster, evidence-based decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="eyebrow reveal">// 02 Stock Level Report</p>
+    <h2 class="section-title reveal">Skills — Two Tracks</h2>
+    <div class="tracks reveal">
+      <div class="track data" data-code="TRACK / DATA">
+        <h3>Data Analytics</h3>
+        <div class="gauge-row"><div class="gauge-label mono">SQL (BigQuery)</div><div class="gauge-track"><div class="gauge-fill" data-fill="80"></div></div><div class="gauge-pct mono">80%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Python</div><div class="gauge-track"><div class="gauge-fill" data-fill="70"></div></div><div class="gauge-pct mono">70%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Tableau</div><div class="gauge-track"><div class="gauge-fill" data-fill="85"></div></div><div class="gauge-pct mono">85%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Excel / Sheets</div><div class="gauge-track"><div class="gauge-fill" data-fill="90"></div></div><div class="gauge-pct mono">90%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Data Visualization</div><div class="gauge-track"><div class="gauge-fill" data-fill="84"></div></div><div class="gauge-pct mono">84%</div></div>
+      </div>
+      <div class="track ops" data-code="TRACK / OPS">
+        <h3>Supply Chain &amp; PPIC</h3>
+        <div class="gauge-row"><div class="gauge-label mono">Warehouse Ops</div><div class="gauge-track"><div class="gauge-fill" data-fill="95"></div></div><div class="gauge-pct mono">95%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Production Planning</div><div class="gauge-track"><div class="gauge-fill" data-fill="90"></div></div><div class="gauge-pct mono">90%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Inventory Control</div><div class="gauge-track"><div class="gauge-fill" data-fill="93"></div></div><div class="gauge-pct mono">93%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Team Supervision</div><div class="gauge-track"><div class="gauge-fill" data-fill="88"></div></div><div class="gauge-pct mono">88%</div></div>
+        <div class="gauge-row"><div class="gauge-label mono">Project Coordination</div><div class="gauge-track"><div class="gauge-fill" data-fill="90"></div></div><div class="gauge-pct mono">90%</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="eyebrow reveal">// 03 Route History</p>
+    <h2 class="section-title reveal">Experience</h2>
+    <div class="timeline reveal">
+
+      <div class="tl-item">
+        <div class="tl-date">Aug 2024 — Present</div>
+        <div class="tl-role">Management Trainee</div>
+        <div class="tl-org">PT Golden Union Oil</div>
+        <div class="tl-desc">
+          <ul>
+            <li>Monitored employee performance according to SOP so that productivity and quality met established standards.</li>
+            <li>Tracked daily production and operational processes for compliance, helping identify deviations early and support consistent product quality.</li>
+            <li>Compiled daily production performance reports in Microsoft Excel, giving management clear visibility into field operations, output, and issues encountered.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Apr 2024 — Jun 2024</div>
+        <div class="tl-role">Supervisor, Production Planning &amp; Inventory Control</div>
+        <div class="tl-org">PT Hokinda Citralestari</div>
+        <div class="tl-desc">
+          <ul>
+            <li>Led the PPIC department, supervising a team of 3 (PPIC Staff, Raw Material Warehouse Head, Finished Goods Warehouse Head) while directly covering two vacant PPIC positions during a hiring gap.</li>
+            <li>Created and optimized production schedules based on sales orders, inventory levels, and raw material availability to maintain on-time production and delivery.</li>
+            <li>Prepared the annual operational budget for the PPIC department by estimating equipment needs and analyzing historical consumption and pricing.</li>
+            <li>Compiled inbound, outbound, inventory, and production reports and presented performance updates to the General Manager.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Jan 2022 — Apr 2024</div>
+        <div class="tl-role">Supervisor, Warehouse</div>
+        <div class="tl-org">PT Nachindo Tape Industry</div>
+        <div class="tl-desc">
+          <ul>
+            <li>Supervised daily warehouse operations, ensuring efficient workflows, SOP compliance, and timely fulfillment of shipment requests.</li>
+            <li><strong>Reduced monthly shipment errors by 50%</strong> by improving process controls and validating loading data against delivery orders before shipping.</li>
+            <li>Used a Warehouse Management System (WMS) to track inventory levels and minimize stock errors.</li>
+            <li>Oversaw inbound and outbound goods movement, coordinating distribution to meet customer requirements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date">Nov 2017 — Present · Part Time</div>
+        <div class="tl-role">Stage Manager</div>
+        <div class="tl-org">Dream Catchers Event Designer</div>
+        <div class="tl-desc">Led event operations to ensure smooth, timely execution — coordinating venue setup and vendor communication to ensure all event requirements were successfully delivered.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <p class="eyebrow reveal">// 04 Shipment Contents</p>
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="projects reveal">
+
+      <div class="card">
+        <div class="tag-line">Featured — Root Cause Analysis · RevoU, Jun 2026</div>
+        <h3>LMNTRIX Shopping Cart — Revenue Decline Analysis</h3>
+        <div class="metric-row">
+          <div class="metric">35.9% <small>Revenue Decline</small></div>
+          <div class="metric">18.4% <small>Order Volume Drop</small></div>
+        </div>
+        <p>Investigated a revenue decline from $131K to $84K by analyzing sales performance, order trends, and customer behavior.</p>
+        <ul>
+          <li>Cleaned, transformed, and analyzed sales data using BigQuery (SQL) to identify key revenue drivers.</li>
+          <li>Built an interactive Tableau dashboard to monitor KPIs including revenue, order volume, AOV, and customer contribution.</li>
+          <li>Identified that the decline in order volume — not pricing — was the primary cause of revenue loss.</li>
+          <li>Recommended customer retention strategies targeting high-value customers to support a 10% revenue recovery within six months.</li>
+        </ul>
+        <div class="stack-row"><span>BigQuery</span><span>SQL</span><span>Tableau</span></div>
+        <a class="card-link" href="https://github.com/kennyrao15/Project" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <p class="eyebrow reveal">// 05 Certification of Origin</p>
+    <h2 class="section-title reveal">Education &amp; Certifications</h2>
+    <div class="edu-list reveal">
+      <div class="edu-item">
+        <div>
+          <h3>Data Analytics</h3>
+          <p>RevoU — Full Stack Data Analytics · Business understanding, spreadsheet analysis, statistics, SQL, AI fundamentals, data visualization, and Python.</p>
+        </div>
+        <div class="tl-date">Feb 2026 — Present</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <h3>Bachelor of Engineering, Industrial Engineering</h3>
+          <p>Widya Mandala Catholic University · GPA 2.91</p>
+        </div>
+        <div class="tl-date">Aug 2017 — Jul 2021</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CONTACT -->
+<footer id="contact">
+  <div class="wrap">
+    <p class="eyebrow">// 06 Delivery Address</p>
+    <h2>Let's connect.</h2>
+    <p>Open to Data Analyst, Business Analyst, and Supply Chain roles — willing to relocate. Reach out through any of the channels below.</p>
+    <div class="contact-row">
+      <a class="contact-btn" href="mailto:kennyrao29@gmail.com">✉ kennyrao29@gmail.com</a>
+      <a class="contact-btn" href="tel:+6282144961773">☎ +62 821-4496-1773</a>
+      <a class="contact-btn" href="https://www.linkedin.com/in/kenny-fransiscus-rao-85a400218/" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="contact-btn" href="https://github.com/kennyrao15" target="_blank" rel="noopener">&lt;/&gt; GitHub</a>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Kenny Fransiscus Rao — Surabaya, Indonesia</span>
+      <span class="mono">END OF MANIFEST</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Build conveyor belt icons
+  (function(){
+    const crateWrap = document.getElementById('conveyorCrates');
+    const barWrap = document.getElementById('conveyorBars');
+    if(!crateWrap || !barWrap) return;
+    const COUNT = 14;
+    for(let rep=0; rep<2; rep++){
+      for(let i=0;i<COUNT;i++){
+        const c = document.createElement('div');
+        c.className = 'crate';
+        crateWrap.appendChild(c);
+        const b = document.createElement('div');
+        b.className = 'bar-icon';
+        b.innerHTML = '<span></span><span></span><span></span>';
+        barWrap.appendChild(b);
+      }
+    }
+  })();
+
+  // Build barcode
+  (function(){
+    const bc = document.getElementById('barcode');
+    const widths = [2,1,3,1,2,4,1,2,1,3,2,1,4,1,2,3,1,1,2,4,1,3,2,1,2,1,3,1,4,2];
+    widths.forEach(w=>{
+      const bar = document.createElement('span');
+      bar.style.width = w + 'px';
+      bar.style.height = (60 + Math.random()*40) + '%';
+      bc.appendChild(bar);
+    });
+  })();
+
+  // Scroll reveal + gauge fill + count-up
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        e.target.querySelectorAll('.gauge-fill').forEach(g=>{
+          g.style.width = g.getAttribute('data-fill') + '%';
+        });
+        e.target.querySelectorAll('.count').forEach(el=>animateCount(el));
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  function animateCount(el){
+    const target = parseFloat(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const decimals = parseInt(el.getAttribute('data-decimals') || '0');
+    if(reduceMotion){ el.textContent = target.toFixed(decimals) + suffix; return; }
+    const duration = 1200;
+    const start = performance.now();
+    function step(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const val = target * eased;
+      el.textContent = val.toFixed(decimals) + suffix;
+      if(progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // 3D tilt on project cards
+  if(!reduceMotion){
+    document.querySelectorAll('.card').forEach(card=>{
+      card.addEventListener('mousemove', (e)=>{
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const rotateX = ((y - cy) / cy) * -6;
+        const rotateY = ((x - cx) / cx) * 6;
+        card.style.transform = `translate(-3px,-3px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      card.addEventListener('mouseleave', ()=>{
+        card.style.transform = '';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
