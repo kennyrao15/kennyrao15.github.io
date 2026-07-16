@@ -249,6 +249,11 @@
   .stats-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
   @media(min-width:720px){.stats-grid{grid-template-columns:repeat(4,1fr);}}
   .stat-box{ border:1.5px solid var(--ink); background:var(--white); padding:18px 16px; text-align:left; }
+  .stat-cat{
+    font-family:'IBM Plex Mono', monospace; font-size:0.62rem;
+    text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--tag-deep); margin-bottom:6px;
+  }
   .stat-num{ font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:1.9rem; color:var(--data); line-height:1; }
   .stat-label{ font-family:'IBM Plex Mono', monospace; font-size:0.64rem; text-transform:uppercase; color:var(--ink-soft); margin-top:8px; letter-spacing:0.04em; }
 
@@ -313,6 +318,7 @@
 
   /* ---------- PROJECTS ---------- */
   .projects{display:grid; grid-template-columns:1fr; gap:18px; perspective:1000px;}
+  @media(min-width:720px){.projects{grid-template-columns:1fr 1fr;}}
   .card{
     background:var(--white);
     border:1.5px solid var(--ink);
@@ -383,7 +389,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand">K. F. RAO</div>
+    <div class="brand">Kenny Fransiscus Rao</div>
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -405,9 +411,7 @@
   </div>
   <div class="label">
     <div class="label-top">
-      <div class="field">Manifest No.<b>KFR-2026-04</b></div>
       <div class="field">Origin<b>Surabaya, Indonesia</b></div>
-      <div class="stamp">Cleared for Transit</div>
     </div>
     <div class="label-body">
       <div class="route">
@@ -451,20 +455,24 @@
   <section id="stats" style="padding-top:50px; padding-bottom:20px;">
     <div class="stats-grid reveal">
       <div class="stat-box">
+        <div class="stat-cat">Experience</div>
         <div class="stat-num"><span class="count" data-target="4" data-suffix="+">0</span></div>
         <div class="stat-label">Years in Operations</div>
       </div>
       <div class="stat-box">
+        <div class="stat-cat">Operations Impact</div>
         <div class="stat-num"><span class="count" data-target="50" data-suffix="%">0</span></div>
         <div class="stat-label">Shipping Errors Reduced</div>
       </div>
       <div class="stat-box">
+        <div class="stat-cat">Project — LMNTRIX</div>
         <div class="stat-num"><span class="count" data-target="35.9" data-suffix="%" data-decimals="1">0</span></div>
         <div class="stat-label">Revenue Decline Diagnosed</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num"><span class="count" data-target="3" data-suffix="">0</span></div>
-        <div class="stat-label">Team Members Led</div>
+        <div class="stat-cat">Warehouse Ops</div>
+        <div class="stat-num"><span class="count" data-target="12" data-suffix="+">0</span></div>
+        <div class="stat-label">Staff Overseen (Admin, Operators, SPV)</div>
       </div>
     </div>
   </section>
@@ -591,6 +599,43 @@
         <a class="card-link" href="https://github.com/kennyrao15/Project" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
 
+      <div class="card">
+        <div class="tag-line">SQL Case Study · BigQuery, 10 Apr 2026</div>
+        <h3>RevoGrocers — Sales Performance Analysis</h3>
+        <div class="metric-row">
+          <div class="metric">556M <small>Top Category Revenue</small></div>
+          <div class="metric">99.85% <small>Repeat Purchase Rate</small></div>
+        </div>
+        <p>Analyzed sales data from RevoGrocers, a fictional multi-location grocery retailer, to uncover which product categories drive revenue and customer loyalty.</p>
+        <ul>
+          <li>Queried and analyzed transactional data in BigQuery (SQL) across product categories, pricing, and customer behavior.</li>
+          <li>Found that Confections led revenue (556M, 12.8% of total) and units sold, driven by volume rather than price.</li>
+          <li>Identified a pricing trade-off: high-priced categories like Grain reached fewer customers, while moderately priced categories like Dairy attracted a broader base.</li>
+          <li>Discovered Confections also had the highest repeat purchase rate (99.85%), signaling strong customer loyalty worth leveraging for retention strategies.</li>
+        </ul>
+        <div class="stack-row"><span>BigQuery</span><span>SQL</span></div>
+        <a class="card-link" href="https://docs.google.com/presentation/d/1mpBnHJ7hvK5I0izT0Qe1FJUfxMkiqbKCn5lvdCjB8oQ/edit" target="_blank" rel="noopener">View Presentation →</a>
+      </div>
+
+      <div class="card">
+        <div class="tag-line">BNSP Data Analyst Certification · LSP TIK Global</div>
+        <h3>AI Impact on Students — Academic Performance &amp; Wellbeing</h3>
+        <div class="metric-row">
+          <div class="metric">49,994 <small>Students Analyzed</small></div>
+          <div class="metric">64.8% <small>Heavy User Burnout Risk</small></div>
+        </div>
+        <p>Investigated how Generative AI usage affects academic performance and mental wellbeing across 49,994 students, 16 variables, and 5 fields of study.</p>
+        <ul>
+          <li>Cleaned a 50,000-row dataset and segmented students into Light, Moderate, and Heavy AI usage groups by weekly hours.</li>
+          <li>Found GenAI use raised GPA by +0.20 on average across all majors, with STEM gaining the most (3.15 → 3.36).</li>
+          <li>Uncovered a productivity–skill trade-off: Heavy Users had the lowest skill retention score (72.68) vs. Moderate Users (76.99).</li>
+          <li>Identified a mental health risk: Heavy Users showed 64.8% high burnout risk — 6× higher than Light Users (10.5%).</li>
+          <li>Built an interactive Tableau dashboard summarizing GPA impact, skill retention, burnout profile, and usage patterns.</li>
+        </ul>
+        <div class="stack-row"><span>Python</span><span>Tableau</span></div>
+        <a class="card-link" href="#" target="_blank" rel="noopener">View Dashboard →</a>
+      </div>
+
     </div>
   </section>
 
@@ -603,6 +648,7 @@
         <div>
           <h3>Data Analytics</h3>
           <p>RevoU — Full Stack Data Analytics · Business understanding, spreadsheet analysis, statistics, SQL, AI fundamentals, data visualization, and Python.</p>
+          <p style="margin-top:6px;"><a href="https://certificates.revou.tech/?id=FSDA-2026-07-258073280217&name=Kenny%20Fransiscus%20Rao" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--data); border-bottom:1px solid var(--data); text-decoration:none;">View Certificate →</a></p>
         </div>
         <div class="tl-date">Feb 2026 — Present</div>
       </div>
